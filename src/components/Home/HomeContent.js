@@ -4,13 +4,7 @@ export default function HomeContent() {
   var [show, isShow] = useState(false);
   return (
     <div>
-      <button
-        onClick={() => {
-          isShow(false);
-        }}
-      >
-        Show
-      </button>
+      <button onClick={() => isShow(false)}>Show</button>
       <button
         onClick={function () {
           isShow(true);
