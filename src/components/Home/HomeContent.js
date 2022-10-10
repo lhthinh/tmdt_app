@@ -1,19 +1,11 @@
 import React, { useState } from "react";
-
+import Home2Content from "./Home2Content";
+import "./HomeContent.scss";
 export default function HomeContent() {
-  var [show, isShow] = useState(false);
   return (
-    <div>
-      <button onClick={() => isShow(false)}>Show</button>
-      <button
-        onClick={function () {
-          isShow(true);
-        }}
-      >
-        Unshow
-      </button>
-
-      <div hidden={show}>You see me</div>
+    <div className="txt-sass">
+      test css
+      <Home2Content />
     </div>
   );
 }
