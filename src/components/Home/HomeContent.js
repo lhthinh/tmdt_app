@@ -1,6 +1,5 @@
 import { Carousel, Col, Row, Card } from "antd";
 import React, { useState } from "react";
-import Home2Content from "./Home2Content";
 import "./HomeContent.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { show, unshow } from "../Login/LoginSlice";
@@ -17,10 +16,9 @@ export default function HomeContent() {
   };
   console.log(visible);
   return (
-    <div className="txt-sass">
+    <div>
       test css {visible} <FontAwesomeIcon icon={faCoffee} />
       <button onClick={handleClick}>click me</button>
-      <Home2Content />
     </div>
   );
 }

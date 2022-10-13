@@ -1,6 +1,7 @@
 import { Col, Row } from "antd";
 import React from "react";
 import laptop from "../../assets/image/laptop.png";
+
 export default function AboutContent() {
   const style = {
     width: "100%",
