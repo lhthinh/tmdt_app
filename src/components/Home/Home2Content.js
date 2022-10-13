@@ -1,6 +1,6 @@
 import React from "react";
-
-export default function Home2Content(props) {
-  var { count } = props;
-  return <div className="txt-sass">you click {count} times</div>;
+import { useSelector } from "react-redux";
+export default function Home2Content() {
+  const count = useSelector((state) => state.counter.value);
+  return <div>you click {count} time</div>;
 }
