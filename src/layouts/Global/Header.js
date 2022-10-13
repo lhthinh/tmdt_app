@@ -39,11 +39,18 @@ export default function Header() {
       <div className="center">
         <Space>
           <div>Home</div>
+          <br />
+          <br />
           <div>About</div>
+          <br />
+          <br />
           <div>Blog</div>
+          <br /> <br />
           <div>Contact Us</div>
         </Space>
       </div>
+      <br />
+
       <div>
         {" "}
         <Carousel afterChange={onChange}>
