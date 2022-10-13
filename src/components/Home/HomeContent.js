@@ -3,6 +3,8 @@ import Home2Content from "./Home2Content";
 import "./HomeContent.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { show, unshow } from "../Login/LoginSlice";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 export default function HomeContent() {
   const visible = useSelector((state) => state.login.visible);
   const dispatch = useDispatch();
@@ -15,7 +17,7 @@ export default function HomeContent() {
   console.log(visible);
   return (
     <div className="txt-sass">
-      test css {visible}
+      test css {visible} <FontAwesomeIcon icon={faCoffee} />
       <button onClick={handleClick}>click me</button>
       <Home2Content />
     </div>
