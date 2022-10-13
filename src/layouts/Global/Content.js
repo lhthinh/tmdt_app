@@ -1,6 +1,5 @@
 import React from "react";
 
 export default function Content(props) {
-  const { children } = props;
-  return <div>{children}</div>;
+  return <div>{props.children}</div>;
 }

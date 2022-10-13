@@ -11,7 +11,7 @@ export default function AppRoutes() {
           _.map(
             globalRoutes,
             ({ component: Component, children, ...rest }, index) => (
-              <Route key={index} element={<Component />} {...rest} />
+              <Route key={Component?.key} element={<Component />} {...rest} />
             )
           )}
       </Route>

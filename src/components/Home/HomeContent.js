@@ -125,5 +125,15 @@ export default function HomeContent() {
         </Col>
       </Row>
     </>
+    // =======
+    // import Home2Content from "./Home2Content";
+    // import "./HomeContent.scss";
+    // export default function HomeContent() {
+    //   return (
+    //     <div className="txt-sass">
+    //       test css
+    //       <Home2Content />
+    //     </div>
+    // >>>>>>> 871f7188ba9ebf96b6cb6d1335c522dabe322d4b
   );
 }
