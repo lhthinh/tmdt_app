@@ -1,12 +1,14 @@
 import { Col, Row } from "antd";
 import React from "react";
 import "./footer.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Footer() {
   return (
     <div className="footer">
       <div className="footer-title">
         <Row>
-          <Col span={12} className="title">
+          <Col span={12} className="title-footer">
             Sign up to Newsletter
           </Col>
           <Col span={12} className="input-footer">
