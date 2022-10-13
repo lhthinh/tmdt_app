@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+  padding-top: 5px;
+}
+.title-text {
+  font-weight: bold;
+  display: flex;
+
+  justify-content: center;
+  font-size: 50px;
+}
+.boder {
+  border-radius: 30px;
+  margin-top: 25px;
+  display: flex;
+  border: 2px solid #f8d849;
+  justify-content: center;
+  font-size: 20px;
+  width: 80%;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
