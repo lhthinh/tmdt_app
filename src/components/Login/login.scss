@@ -1,0 +1,40 @@
+.ant-modal-body {
+  margin-left: -40px;
+  width: 500px;
+}
+.btn-login {
+  border-radius: 10px;
+  background-color: #f8d849;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+}
+.btn-login:hover {
+  background-color: #f8d849;
+}
+.forgot-password-login {
+  margin-left: 70px;
+  color: #dad5d5;
+  font-size: 15px;
+  position: relative;
+}
+.forgot-password-login:before {
+  content: "";
+  height: 2px;
+  width: 120px;
+  background: #dad5d5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.forgot-password-login:hover {
+  color: #dad5d5;
+}
+
+.form-name {
+  margin-left: 200px;
+  font-size: 50px;
+  font-weight: bold;
+}
