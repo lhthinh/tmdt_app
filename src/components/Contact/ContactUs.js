@@ -7,7 +7,6 @@ import { UilAirplay } from "@iconscout/react-unicons";
 export default function ContactUs() {
   return (
     <div>
-      <UilAirplay />
       <Row>
         <Col span={12}>
           <Card

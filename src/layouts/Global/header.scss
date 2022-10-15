@@ -2,14 +2,16 @@
   display: flex;
   justify-content: flex-end;
   margin-right: 60px;
-  padding-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 15px;
 }
 .title-text {
   font-weight: bold;
   display: flex;
 
   justify-content: center;
-  font-size: 50px;
+  font-size: 60px;
 }
 .boder {
   border-radius: 30px;
@@ -27,4 +29,26 @@
 }
 .action-click {
   cursor: pointer;
+}
+.bordercol {
+  background-color: #494948;
+  height: 15px;
+  width: 2px;
+}
+.bordercol1 {
+  background-color: #494948;
+  height: 15px;
+  width: 3px;
+}
+.bordercol2 {
+  background-color: #494948;
+  height: 15px;
+  width: 3px;
+}
+.dam {
+  font-weight: bold;
+  display: flex;
+}
+.txt-header {
+  margin: 0;
 }

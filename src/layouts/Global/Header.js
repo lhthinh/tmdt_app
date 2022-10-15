@@ -4,6 +4,10 @@ import React from "react";
 import { Carousel } from "antd";
 import "./header.scss";
 import { useNavigate } from "react-router-dom";
+import { UilMapMarker } from "@iconscout/react-unicons";
+import { UilCarSideview } from "@iconscout/react-unicons";
+import { UilShoppingCartAlt } from "@iconscout/react-unicons";
+import { UilUser } from "@iconscout/react-unicons";
 export default function Header() {
   const navigate = useNavigate();
   const contentStyle = {
@@ -21,10 +25,25 @@ export default function Header() {
     <div>
       <div className="header">
         <Space>
-          <div>Store Locator</div>
-          <div>Track Your Oder</div>
-          <div>Shop</div>
-          <div>My Account</div>
+          <div className="dam">
+            <UilMapMarker />
+            <p className="txt-header">Store Locator</p>
+          </div>
+          <div className="bordercol"></div>
+          <div className="dam">
+            <UilCarSideview />
+            <p className="txt-header">Track Your Oder</p>
+          </div>
+          <div className="bordercol1"></div>
+          <div className="dam">
+            <UilShoppingCartAlt />
+            <p className="txt-header">Shop</p>
+          </div>
+          <div className="bordercol2"></div>
+          <div className="dam">
+            <UilUser />
+            <p className="txt-header">My Account</p>
+          </div>
         </Space>
       </div>
       <hr />
@@ -56,12 +75,18 @@ export default function Header() {
           >
             About
           </div>
-          <div className="action-click">Blog</div>
+          <div
+            className="action-click"
+            onClick={() => {
+              navigate("/blog");
+            }}
+          >
+            Blog
+          </div>
           <div className="action-click">Contact Us</div>
         </Space>
       </div>
       <div>
-        {" "}
         <Carousel afterChange={onChange}>
           <div>
             <h3 style={contentStyle}>1</h3>
