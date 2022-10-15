@@ -1,13 +1,40 @@
-import { Col, Row } from "antd";
+import { Card, Col, Radio, Row } from "antd";
+import SizeContext from "antd/lib/config-provider/SizeContext";
 import React from "react";
 import logo from "../../assets/image/logo.png";
+import { UilAirplay } from "@iconscout/react-unicons";
 
 export default function ContactUs() {
   return (
     <div>
+      <UilAirplay />
       <Row>
-        <Col className="Ds-logo" span={12}>
-          <img alt="hinh" src={logo} />
+        <Col span={12}>
+          <Card
+            style={{
+              width: 600,
+              height: 750,
+              marginLeft: 150,
+              borderRadius: 30,
+            }}
+            cover={<img alt="hinh" src={logo} />}
+          >
+            <div style={{ marginLeft: 50, fontSize: 20 }}>
+              <b>ASICC HCM (Làm việc từ 9h00 - 20h00)</b>
+              <br />
+              <br />
+              Lầu 5, 35 Nguyễn Văn Tráng, P.Bến Nghé, Quận 1,TP.HCM
+              <br />
+              <br />
+              Phone:(028) 7109 1181
+              <br />
+              <br />
+              Email bán hàng:sales@theasicc.com
+              <br />
+              <br />
+              CSKH ASICC:cskh@theasicc.com
+            </div>
+          </Card>
         </Col>
 
         <Col span={12}>

@@ -3,7 +3,9 @@ import Column from "antd/lib/table/Column";
 import React from "react";
 import { Carousel } from "antd";
 import "./header.scss";
+import { useNavigate } from "react-router-dom";
 export default function Header() {
+  const navigate = useNavigate();
   const contentStyle = {
     height: "160px",
     color: "#fff",
@@ -38,19 +40,26 @@ export default function Header() {
       </div>
       <div className="center">
         <Space>
-          <div>Home</div>
-          <br />
-          <br />
-          <div>About</div>
-          <br />
-          <br />
-          <div>Blog</div>
-          <br /> <br />
-          <div>Contact Us</div>
+          <div
+            className="action-click"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Home
+          </div>
+          <div
+            className="action-click"
+            onClick={() => {
+              navigate("/about");
+            }}
+          >
+            About
+          </div>
+          <div className="action-click">Blog</div>
+          <div className="action-click">Contact Us</div>
         </Space>
       </div>
-      <br />
-
       <div>
         {" "}
         <Carousel afterChange={onChange}>
