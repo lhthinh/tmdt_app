@@ -1,4 +1,4 @@
-import { Avatar, Card, Col, Row } from "antd";
+import { Card, Col, Row } from "antd";
 import React from "react";
 import "./HomeContent.scss";
 const { Meta } = Card;
