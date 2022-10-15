@@ -1,10 +1,14 @@
-import { Card, Col, Radio, Row } from "antd";
+import { Button, Card, Col, Form, Input, Radio, Row } from "antd";
 import SizeContext from "antd/lib/config-provider/SizeContext";
 import React from "react";
 import logo from "../../assets/image/logo.png";
 import { UilAirplay } from "@iconscout/react-unicons";
+import TextArea from "antd/lib/input/TextArea";
 
 export default function ContactUs() {
+  const handleSubmit = (values) => {
+    console.log(`values`);
+  };
   return (
     <div>
       <Row>
@@ -37,45 +41,118 @@ export default function ContactUs() {
         </Col>
 
         <Col span={12}>
-          <h2>
-            <b>Form liên hệ</b>
-          </h2>
-          <p>
-            Chúng tôi muốn lắng nghe ý kiến từ quý khách hàng Vui lòng liên hệ
-            với chúng tôi, chúng tôi đảm bảo sẽ liên hệ lại với bạn trong thời
-            gian sớm nhất có thể.
-          </p>
+          <Form onFinish={handleSubmit}>
+            <h2>
+              <b>Form liên hệ</b>
+            </h2>
+            <p>
+              Chúng tôi muốn lắng nghe ý kiến từ quý khách hàng Vui lòng liên hệ
+              với chúng tôi, chúng tôi đảm bảo sẽ liên hệ lại với bạn trong thời
+              gian sớm nhất có thể.
+            </p>
 
-          <div>
-            <Row>
-              <Col span={6}>
-                <b>Họ và tên *</b>
-                <input type="text" placeholder="  Họ và tên" />
-                <br />
-                <br />
-
-                <b>Số điện thoại *</b>
-                <input type="text" placeholder="  Số điện thoại" />
-              </Col>
-              <Col span={6}>
-                <b>Email *</b>
-                <input type="text" placeholder="  Email" />
-                <br />
-                <br />
-
-                <b>Tiêu đề *</b>
-                <input type="text" placeholder="  Tiêu đề" />
-              </Col>
-            </Row>
             <div>
-              <b>Lời nhắn *</b>
-              <br />
-              <textarea
-                type="text"
-                placeholder="Nhập nội dung lời nhắn của bạn:"
-              />
+              <Row>
+                <Col span={6}>
+                  <p>Họ và tên *</p>
+                  <Form.Item
+                    name="fullname"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Vui lòng nhập họ và tên",
+                      },
+                      {
+                        max: 20,
+                        message: `Vui lòng nhập không quá 20 ký tự`,
+                      },
+                    ]}
+                  >
+                    <Input />
+                  </Form.Item>
+                  <p>Số điện thoại</p>
+                  <Form.Item
+                    name="phone"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Vui lòng nhập số điện thoại của bạn",
+                      },
+                      {
+                        //number
+                      },
+                      {
+                        max: 10,
+                        message: `Vui lòng nhập không quá 10 ký tự`,
+                      },
+                    ]}
+                  >
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col span={6}>
+                  <p>Email</p>
+                  <Form.Item
+                    name="email"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Vui lòng nhập email cùa bạn",
+                      },
+                      {
+                        max: 50,
+                        message: `Vui lòng nhập không quá 50 ký tự`,
+                      },
+                    ]}
+                  >
+                    <Input />
+                  </Form.Item>
+
+                  <p>Tiêu đề</p>
+                  <Form.Item
+                    name="title"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Vui lòng nhập tiêu đề",
+                      },
+                      {
+                        max: 50,
+                        message: `Vui lòng nhập không quá 50 ký tự`,
+                      },
+                    ]}
+                  >
+                    <Input />
+                  </Form.Item>
+                </Col>
+              </Row>
+              <p>Lời nhắn *</p>
+              <Form.Item
+                style={{ paddingRight: "30px" }}
+                name="loinhac"
+                rules={[
+                  {
+                    required: true,
+                    message: "Vui lòng nhập lời nhắn của bạn",
+                  },
+                  {
+                    max: 50,
+                    message: `Vui lòng nhập không quá 50 ký tự`,
+                  },
+                ]}
+              >
+                <TextArea
+                  autoSize={{
+                    minRows: 4,
+                    maxRows: 6,
+                  }}
+                />
+              </Form.Item>
             </div>
-          </div>
+            <Button type="primary" htmlType="submit">
+              Gửi ngay
+            </Button>
+          </Form>
         </Col>
       </Row>
     </div>

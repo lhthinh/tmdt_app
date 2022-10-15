@@ -1,15 +1,31 @@
-import { Col, Row, Space } from "antd";
-import Column from "antd/lib/table/Column";
+import {
+  UilCarSideview,
+  UilMapMarker,
+  UilShoppingCartAlt,
+  UilUser,
+  UilSearch,
+} from "@iconscout/react-unicons";
+import { Carousel, Col, Input, Row, Space } from "antd";
 import React from "react";
-import { Carousel } from "antd";
-import "./header.scss";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { UilMapMarker } from "@iconscout/react-unicons";
-import { UilCarSideview } from "@iconscout/react-unicons";
-import { UilShoppingCartAlt } from "@iconscout/react-unicons";
-import { UilUser } from "@iconscout/react-unicons";
+import { show } from "../../components/Login/LoginSlice";
+import "./header.scss";
+const { Search } = Input;
+const suffix = (
+  <UilSearch
+    style={{
+      fontSize: 16,
+      color: "yellow",
+    }}
+  />
+);
 export default function Header() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const handleOpen = () => {
+    dispatch(show());
+  };
   const contentStyle = {
     height: "160px",
     color: "#fff",
@@ -21,26 +37,32 @@ export default function Header() {
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
+
   return (
     <div>
       <div className="header">
         <Space>
-          <div className="dam">
+          <div
+            className="dam action-click"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <UilMapMarker />
             <p className="txt-header">Store Locator</p>
           </div>
           <div className="bordercol"></div>
-          <div className="dam">
+          <div className="dam action-click">
             <UilCarSideview />
             <p className="txt-header">Track Your Oder</p>
           </div>
           <div className="bordercol1"></div>
-          <div className="dam">
+          <div className="dam action-click">
             <UilShoppingCartAlt />
             <p className="txt-header">Shop</p>
           </div>
           <div className="bordercol2"></div>
-          <div className="dam">
+          <div className="dam action-click" onClick={handleOpen}>
             <UilUser />
             <p className="txt-header">My Account</p>
           </div>
@@ -53,19 +75,19 @@ export default function Header() {
             <h1 className="title-text">ASICC</h1>
           </Col>
           <Col span={12} offset={1}>
-            <input className="boder" type={"text"} />
+            <Search placeholder="input search text" enterButton />
           </Col>
         </Row>
       </div>
       <div className="center">
-        <Space>
+        <Space style={{ gap: 50 }}>
           <div
             className="action-click"
             onClick={() => {
               navigate("/");
             }}
           >
-            Home
+            Trang chủ
           </div>
           <div
             className="action-click"
@@ -73,7 +95,7 @@ export default function Header() {
               navigate("/about");
             }}
           >
-            About
+            Về chúng tôi
           </div>
           <div
             className="action-click"
@@ -81,9 +103,16 @@ export default function Header() {
               navigate("/blog");
             }}
           >
-            Blog
+            Tin tức
           </div>
-          <div className="action-click">Contact Us</div>
+          <div
+            className="action-click"
+            onClick={() => {
+              navigate("/contact");
+            }}
+          >
+            Liên hệ
+          </div>
         </Space>
       </div>
       <div>
