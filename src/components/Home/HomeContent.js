@@ -1,4 +1,4 @@
-import { Avatar, Card, Col, Row } from "antd";
+import { Card, Col, Row } from "antd";
 import React from "react";
 import "./HomeContent.scss";
 const { Meta } = Card;
@@ -52,6 +52,7 @@ export default function HomeContent() {
   ];
   return (
     <div className="body">
+      {/* 3 hình đầu  */}
       <Row className="intro-produc">
         <Col span={8}>
           <Card
@@ -94,6 +95,7 @@ export default function HomeContent() {
             <Meta title="Card title" description="This is the description" />
           </Card>
         </Col>
+        {/* From the BLog */}
       </Row>
       <Row className="content">
         <Col span={8} className="blog">
