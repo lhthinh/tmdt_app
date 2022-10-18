@@ -1,8 +1,10 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./HomeContent.scss";
 const { Meta } = Card;
 export default function HomeContent() {
+  const navigate = useNavigate();
   const tempArr = [
     {
       name: "ram",
@@ -138,8 +140,11 @@ export default function HomeContent() {
                 <Col span={8}>
                   <Card
                     className="card-blog"
-                    style={{ width: 300, height: 400 }}
+                    style={{ width: 300, height: 400, cursor: "pointer" }}
                     cover={<img alt="example" src={item.img} />}
+                    onClick={() => {
+                      navigate("/product");
+                    }}
                   >
                     <Meta
                       title={item.name}

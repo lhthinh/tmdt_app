@@ -6,6 +6,7 @@ import { Button, Checkbox, Form, Input } from "antd";
 import "./login.scss";
 export default function LoginContent() {
   const visible = useSelector((state) => state.login.visible);
+  const [form] = Form.useForm();
   const dispatch = useDispatch();
   const handleCancel = () => {
     dispatch(unshow());
@@ -24,6 +25,7 @@ export default function LoginContent() {
       onCancel={handleCancel}
     >
       <Form
+        form={form}
         className
         name="basic"
         labelCol={{
@@ -61,6 +63,7 @@ export default function LoginContent() {
               required: true,
               message: "Please input your password!",
             },
+            { max: 30, message: "Mật khẩu không được vượt quá 30 ký tự" },
           ]}
         >
           <Input.Password />
@@ -83,7 +86,13 @@ export default function LoginContent() {
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit" className="btn-login">
+          <Button
+            type="primary"
+            className="btn-login"
+            onClick={() => {
+              form.submit();
+            }}
+          >
             LOGIN
           </Button>
           <a href="#" className="forgot-password-login">
