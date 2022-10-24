@@ -30,7 +30,7 @@
 }
 .action-click:hover {
   cursor: pointer;
-  color: #f8d849;
+  color: #49e7f8;
 }
 .bordercol {
   background-color: #494948;
@@ -57,4 +57,12 @@
 .search-icon {
   width: 100px;
   background-color: yellow;
+}
+.size {
+  margin-top: 30px;
+  padding-left: 90px;
+  width: 1000px;
+}
+.gap {
+  gap: 100px;
 }

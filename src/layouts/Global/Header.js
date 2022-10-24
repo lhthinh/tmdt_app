@@ -12,13 +12,14 @@ import { useNavigate } from "react-router-dom";
 import { show } from "../../components/Login/LoginSlice";
 import "./header.scss";
 import bg from "../../assets/image/bg.png";
+import laptop from "../../assets/image/laptop.png";
+import hinh1 from "../../assets/image/hinh1.jpg";
 
 const { Search } = Input;
 const suffix = (
   <UilSearch
     style={{
-      fontSize: 16,
-      color: "yellow",
+      fontSize: 100,
     }}
   />
 );
@@ -28,14 +29,7 @@ export default function Header() {
   const handleOpen = () => {
     dispatch(show());
   };
-  const contentStyle = {
-    height: "160px",
-    color: "#fff",
-    lineHeight: "160px",
-    textAlign: "center",
-    background: "#364d79",
-    borderRadius: "10px",
-  };
+
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
@@ -53,17 +47,14 @@ export default function Header() {
             <UilMapMarker />
             <p className="txt-header">Store Locator</p>
           </div>
-          <div className="bordercol"></div>
           <div className="dam action-click">
             <UilCarSideview />
             <p className="txt-header">Track Your Oder</p>
           </div>
-          <div className="bordercol1"></div>
           <div className="dam action-click">
             <UilShoppingCartAlt />
             <p className="txt-header">Shop</p>
           </div>
-          <div className="bordercol2"></div>
           <div className="dam action-click" onClick={handleOpen}>
             <UilUser />
             <p className="txt-header">My Account</p>
@@ -76,13 +67,13 @@ export default function Header() {
           <Col span={6}>
             <h1 className="title-text">ASICC</h1>
           </Col>
-          <Col span={12} offset={1}>
-            <Search placeholder="input search text" enterButton />
+          <Col span={12} offset={1} style={{ marginTop: 35 }}>
+            <Search placeholder="Tìm kiếm" enterButton />
           </Col>
         </Row>
       </div>
       <div className="center">
-        <Space style={{ gap: 50 }}>
+        <Space style={{ gap: 100 }}>
           <div
             className="action-click"
             onClick={() => {
@@ -90,6 +81,14 @@ export default function Header() {
             }}
           >
             Trang chủ
+          </div>
+          <div
+            className="action-click"
+            onClick={() => {
+              navigate("/listproduct");
+            }}
+          >
+            Sản phẩm
           </div>
           <div
             className="action-click"
@@ -118,29 +117,26 @@ export default function Header() {
         </Space>
       </div>
       <div>
-        <Carousel afterChange={onChange}>
+        <Carousel afterChange={onChange} autoplay>
           <div>
-            <h3 style={contentStyle}>
+            <h1 className="size">
               <img alt="hinhhhh" src={bg}></img>
-            </h3>
+            </h1>
           </div>
           <div>
-            <h3 style={contentStyle}>
-              {" "}
+            <h1 className="size">
               <img alt="hinhhhh" src={bg}></img>
-            </h3>
+            </h1>
           </div>
           <div>
-            <h3 style={contentStyle}>
-              {" "}
+            <h1 className="size">
               <img alt="hinhhhh" src={bg}></img>
-            </h3>
+            </h1>
           </div>
           <div>
-            <h3 style={contentStyle}>
-              {" "}
+            <h1 className="size">
               <img alt="hinhhhh" src={bg}></img>
-            </h3>
+            </h1>
           </div>
         </Carousel>
       </div>
