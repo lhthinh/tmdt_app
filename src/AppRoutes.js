@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Global from "../src/layouts/Global";
 import { globalRoutes } from "./Routes";
