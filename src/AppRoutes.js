@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Global from "../src/layouts/Global";
 import { globalRoutes } from "./Routes";
@@ -13,9 +13,10 @@ export default function AppRoutes() {
           {globalRoutes &&
             _.map(globalRoutes, (route, index) => (
               <Route
-                key={route?.key}
-                element={<route.component />}
+                key={route.key}
+                exact
                 path={route.path}
+                element={<route.component />}
               />
             ))}
         </Route>

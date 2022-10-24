@@ -17,7 +17,12 @@ export default function LoginContent() {
     console.log("Failed:", errorInfo);
   };
   return (
-    <Modal visible={visible} onCancel={handleCancel}>
+    <Modal
+      visible={visible}
+      closable={false}
+      footer={null}
+      onCancel={handleCancel}
+    >
       <Form
         className
         name="basic"
