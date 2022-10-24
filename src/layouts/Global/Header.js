@@ -11,6 +11,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { show } from "../../components/Login/LoginSlice";
 import "./header.scss";
+import bg from "../../assets/image/bg.png";
+
 const { Search } = Input;
 const suffix = (
   <UilSearch
@@ -118,16 +120,27 @@ export default function Header() {
       <div>
         <Carousel afterChange={onChange}>
           <div>
-            <h3 style={contentStyle}>1</h3>
+            <h3 style={contentStyle}>
+              <img alt="hinhhhh" src={bg}></img>
+            </h3>
           </div>
           <div>
-            <h3 style={contentStyle}>2</h3>
+            <h3 style={contentStyle}>
+              {" "}
+              <img alt="hinhhhh" src={bg}></img>
+            </h3>
           </div>
           <div>
-            <h3 style={contentStyle}>3</h3>
+            <h3 style={contentStyle}>
+              {" "}
+              <img alt="hinhhhh" src={bg}></img>
+            </h3>
           </div>
           <div>
-            <h3 style={contentStyle}>4</h3>
+            <h3 style={contentStyle}>
+              {" "}
+              <img alt="hinhhhh" src={bg}></img>
+            </h3>
           </div>
         </Carousel>
       </div>
