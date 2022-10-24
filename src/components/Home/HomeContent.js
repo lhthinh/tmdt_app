@@ -1,5 +1,6 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./HomeContent.scss";
 const { Meta } = Card;
 export default function HomeContent() {
@@ -29,7 +30,6 @@ export default function HomeContent() {
           </Card>
         </Col>
         <Col span={8}>
-          {" "}
           <Card
             style={{ width: 400 }}
             cover={
@@ -43,7 +43,6 @@ export default function HomeContent() {
           </Card>
         </Col>
         <Col span={8}>
-          {" "}
           <Card
             style={{ width: 400 }}
             cover={
