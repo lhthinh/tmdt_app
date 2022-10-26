@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Card, Col, Input, Row } from "antd";
-import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
-import { getAllhomecontent } from "./HomeContentSlice";
 import { UilSearch } from "@iconscout/react-unicons";
-import { UilDirection } from "@iconscout/react-unicons";
-import "./HomeContent.scss";
+import { Card, Col, Input, Radio, Row } from "antd";
+import axios from "axios";
 import _ from "lodash";
-import { Radio } from "antd";
-import { UilArrowRight } from "@iconscout/react-unicons";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import "./HomeContent.scss";
+import { getAllhomecontent } from "./HomeContentSlice";
 
 const { Meta } = Card;
 
