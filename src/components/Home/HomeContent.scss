@@ -1,11 +1,44 @@
+// .body {
+//   padding: 0;
+//   margin-top: 100px;
+//   margin-bottom: 20px;
+// }
 .body {
-  margin-left: 150px;
-  padding: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 170px;
+  margin: 0 430px;
 }
+.provi-store {
+  display: block;
+  margin-left: -4px;
+  padding: 0;
+}
+.wbg-wrapper {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+.best-seller-laptop h4 {
+  font-size: 22px;
+  background: #d7202c;
+  padding: 10px 20px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.holder-1 {
+  height: 1px;
+  border-top: 1px solid black;
+  display: block;
+}
+
+// ----Code Cũ ----
+.intro-product {
+  margin-top: 10px;
+}
+
 .content {
   margin-top: 50px;
+  margin-left: 100px;
 }
 .blog-name {
   font-size: 30px;
@@ -14,7 +47,7 @@
 .blog-name:after {
   content: "";
   height: 2px;
-  width: 400px;
+  width: 350px;
   background: #dad5d5;
   position: absolute;
   left: 0;
@@ -37,7 +70,7 @@
 .title-name::after {
   content: "";
   height: 2px;
-  width: 970px;
+  width: 1060px;
   background: #dad5d5;
   position: absolute;
   left: 0;
@@ -46,7 +79,7 @@
 .title-name a:hover {
   color: red;
 }
-.card-blog {
+.card-product {
   margin-top: 20px;
 }
 .blog-name-1 {
@@ -56,7 +89,7 @@
 .blog-name-1:after {
   content: "";
   height: 2px;
-  width: 400px;
+  width: 350px;
   background: #dad5d5;
   position: absolute;
   left: 0;
@@ -65,4 +98,8 @@
 .card-blog-1 {
   margin-bottom: 30px;
   margin-top: 20px;
+}
+.size {
+  margin-top: 30px;
+  width: 100%;
 }
