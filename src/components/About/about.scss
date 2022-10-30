@@ -1,0 +1,32 @@
+.title-overview {
+  position: relative;
+  width: max-content;
+}
+.about-page .main-title {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 64px;
+  text-transform: uppercase;
+  background: -o-linear-gradient(354.82deg, #eb67cb 43.94%, #6285f0 91.72%);
+  background: linear-gradient(95.18deg, #eb67cb 43.94%, #6285f0 91.72%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  width: max-content;
+}
+.des {
+  max-width: 70%;
+  font-size: 15px;
+}
+#main-title_2 {
+  margin-left: 350px;
+}
+.title-overview:after {
+  //
+  position: absolute;
+  top: -180%;
+  right: -25%;
+  pointer-events: none;
+}

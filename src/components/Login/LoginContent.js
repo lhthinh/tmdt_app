@@ -19,6 +19,7 @@ export default function LoginContent() {
   };
   return (
     <Modal
+      style={{ paddingTop: 142 }}
       visible={visible}
       closable={false}
       footer={null}
@@ -41,7 +42,7 @@ export default function LoginContent() {
         onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
-        <Form.Item className="form-name">ASICC</Form.Item>
+        <Form.Item className="form-name">Đăng nhập</Form.Item>
         <Form.Item
           label="Username"
           name="username"

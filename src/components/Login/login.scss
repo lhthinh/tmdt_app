@@ -4,21 +4,25 @@
 }
 .btn-login {
   border-radius: 10px;
-  background-color: #f8d849;
+  background-color: red;
   color: white;
   border: none;
   width: 100px;
   height: 40px;
   font-weight: bold;
 }
+.btn-login:focus {
+  background-color: red;
+}
 .btn-login:hover {
-  background-color: #f8d849;
+  background-color: red;
 }
 .forgot-password-login {
   margin-left: 70px;
-  color: #dad5d5;
+  color: black;
   font-size: 15px;
   position: relative;
+  font-weight: bold;
 }
 .forgot-password-login:before {
   content: "";
@@ -35,6 +39,6 @@
 
 .form-name {
   margin-left: 200px;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }

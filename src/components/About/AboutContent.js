@@ -1,15 +1,14 @@
 import { Col, Row } from "antd";
 import React from "react";
 import laptop from "../../assets/image/laptop.png";
+import bc from "../../assets/image/bg.png";
+import "./about.scss";
 
 export default function AboutContent() {
   const style = {
     width: "100%",
     height: "100%",
     borderRadius: "20px",
-  };
-  const style2 = {
-    color: "#F8D849",
   };
 
   var tmpArr = [
@@ -22,28 +21,32 @@ export default function AboutContent() {
   ];
   return (
     <>
-      <div style={{ margin: 50 }}>
+      <div style={{ margin: 300, marginBottom: 100 }} className="about-page">
         <Row>
           <Col span={12}>
             <div style={{ marginRight: 60 }}>
-              <h2 style={style2}>GIỚI THIỆU ASICC</h2>
-              <p>
-                <b>
-                  Thương hiệu ASICC bao gồm website theasicc.com và Fanpage
-                  ASICCVietnam. <br /> <br />
-                  Thương hiệu ASICC thuộc sở hữu của Công ty TNHH The ASICC.
+              <div className="title-overview">
+                <h2 className="main-title" style={{ marginBottom: 50 }}>
+                  GIỚI THIỆU ASICS
+                </h2>
+              </div>
+              <div className="des">
+                <p>
+                  Thương hiệu Asics bao gồm website <a>theasics.com</a> và
+                  <a> Fanpage AsicsVietnam.</a> <br /> <br />
+                  Thương hiệu Asics thuộc sở hữu của Công ty TNHH The Asics.
                   Được biết đến là đơn vị ủy quyền bán lẻ chính thức tại Việt
                   Nam, chuyên kinh doanh các sản phẩm Laptop Gaming cao cấp, PC
                   đồ họa, linh-phụ kiện, thiết bị giải trí của nhiều nhãn hàng
                   lớn như Acer, Asus, Apple, Dell, HP, Lenovo, MSI, Gigabyte,
                   Razer, HyperX, Logitech, Samsung… <br /> <br /> Sau nhiều năm
                   phát triển với phương châm Khách hàng ở vị trí trọng tâm,
-                  Xgear luôn cố gắng nỗ lực hết mình để đem đến sản phẩm và dịch
+                  Asics luôn cố gắng nỗ lực hết mình để đem đến sản phẩm và dịch
                   vụ tốt nhất đến với khách hàng. <br /> <br />
                   Chúng tôi luôn cam kết đảm bảo các sản phẩm bán ra là chính
                   hãng và có nguồn gốc xuất xứ rõ ràng.
-                </b>
-              </p>
+                </p>
+              </div>
             </div>
           </Col>
           <Col span={12}>
@@ -52,7 +55,9 @@ export default function AboutContent() {
         </Row>
         <br />
         <br />
-        <h1 style={{ textAlign: "center", ...style2 }}>Sản phẩm cung cấp</h1>
+        <h1 className="main-title" id="main-title_2">
+          Sản phẩm cung cấp
+        </h1>
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           {tmpArr.map(function (item, index) {
             return (
@@ -70,7 +75,7 @@ export default function AboutContent() {
           </Col>
           <Col span={12}>
             <div style={{ marginLeft: 60 }}>
-              <h2 style={style2}>CHÍNH SÁCH KHÁCH HÀNG</h2>
+              <h2 className="main-title">CHÍNH SÁCH KHÁCH HÀNG</h2>
               <p>
                 <b>
                   Với phương châm : <br /> <br /> “Chất lượng là sự bảo đảm tốt
