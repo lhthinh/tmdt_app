@@ -14,13 +14,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { show } from "../../components/Login/LoginSlice";
 import "./header.scss";
-<<<<<<< HEAD
-import bg from "../../assets/image/bg.png";
-import laptop from "../../assets/image/laptop.png";
-import hinh1 from "../../assets/image/hinh1.jpg";
-=======
 import { ClockCircleOutlined } from "@ant-design/icons";
->>>>>>> 5da486aefd44007ce38ff59051d7b37bca0e4c3b
 
 const { Search } = Input;
 const suffix = (
@@ -30,6 +24,7 @@ const suffix = (
     }}
   />
 );
+
 const style = {
   height: 40,
   width: 40,
@@ -46,42 +41,10 @@ export default function Header() {
   const handleOpen = () => {
     dispatch(show());
   };
-<<<<<<< HEAD
-
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
-  };
-=======
->>>>>>> 5da486aefd44007ce38ff59051d7b37bca0e4c3b
 
   return (
     <div id="header">
       <div className="header">
-<<<<<<< HEAD
-        <Space>
-          <div
-            className="dam action-click"
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            <UilMapMarker />
-            <p className="txt-header">Store Locator</p>
-          </div>
-          <div className="dam action-click">
-            <UilCarSideview />
-            <p className="txt-header">Track Your Oder</p>
-          </div>
-          <div className="dam action-click">
-            <UilShoppingCartAlt />
-            <p className="txt-header">Shop</p>
-          </div>
-          <div className="dam action-click" onClick={handleOpen}>
-            <UilUser />
-            <p className="txt-header">My Account</p>
-          </div>
-        </Space>
-=======
         <div className="container">
           <Row style={{ display: "flex" }}>
             <Col span={3}></Col>
@@ -156,7 +119,6 @@ export default function Header() {
             </Col>
           </Row>
         </div>
->>>>>>> 5da486aefd44007ce38ff59051d7b37bca0e4c3b
       </div>
       <div id="wrapper">
         <div id="nav-header">
@@ -1058,11 +1020,7 @@ export default function Header() {
         </Row>
       </div>
       <div className="center">
-<<<<<<< HEAD
-        <Space style={{ gap: 100 }}>
-=======
         <Space size={30}>
->>>>>>> 5da486aefd44007ce38ff59051d7b37bca0e4c3b
           <div
             className="action-click"
             onClick={() => {
@@ -1104,40 +1062,12 @@ export default function Header() {
             Liên hệ
           </div>
         </Space>
-<<<<<<< HEAD
-      </div>
-      <div>
-        <Carousel afterChange={onChange} autoplay>
-          <div>
-            <h1 className="size">
-              <img alt="hinhhhh" src={bg}></img>
-            </h1>
-          </div>
-          <div>
-            <h1 className="size">
-              <img alt="hinhhhh" src={bg}></img>
-            </h1>
-          </div>
-          <div>
-            <h1 className="size">
-              <img alt="hinhhhh" src={bg}></img>
-            </h1>
-          </div>
-          <div>
-            <h1 className="size">
-              <img alt="hinhhhh" src={bg}></img>
-            </h1>
-          </div>
-        </Carousel>
-      </div>
-=======
       </div> */}
       <BackTop className="back-to-top">
         <div style={style}>
           <UilAngleUp />
         </div>
       </BackTop>
->>>>>>> 5da486aefd44007ce38ff59051d7b37bca0e4c3b
     </div>
   );
 }
