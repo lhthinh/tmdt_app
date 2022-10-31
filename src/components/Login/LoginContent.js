@@ -96,8 +96,8 @@ export default function LoginContent() {
           >
             LOGIN
           </Button>
-          <a href="#" className="forgot-password-login">
-            Forgot Password ?
+          <a href="#" className="link-to-form-register">
+            Đăng ký
           </a>
         </Form.Item>
       </Form>

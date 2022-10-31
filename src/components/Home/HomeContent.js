@@ -11,6 +11,7 @@ import acer from "../../assets/image/Acer-Store.jpg";
 import asus from "../../assets/image/Asus-Store.jpg";
 import lenovo from "../../assets/image/Lenovo-Store.jpg";
 import msi from "../../assets/image/MSI-Store.jpg";
+
 import SwipeToSlide from "../Slider/slider.js";
 const { Meta } = Card;
 const onChange = (currentSlide) => {
@@ -29,53 +30,53 @@ const contentStyle = {
 export default function HomeContent() {
   const navigate = useNavigate();
 
-  const tempArr = [
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    },
-  ];
+  // const tempArr = [
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  //   {
+  //     name: "ram",
+  //     price: 200,
+  //     img: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+  //   },
+  // ];
   //
   return (
     <div class="body">
@@ -157,9 +158,45 @@ export default function HomeContent() {
       <div className="wbg-wrapper">
         <Col span={12} style={{ maxWidth: "100%" }}>
           <div className="best-seller-laptop" style={{ display: "flex" }}>
-            <span className="holder-1"></span>
+            <span className="holder">
+              <span className="sep_line"></span>
+            </span>
             <h4>LAPTOP GAMING BEST-SELLER</h4>
-            <span className="holder-1"></span>
+            <span className="holder">
+              <span className="sep_line"></span>
+            </span>
+          </div>
+          <div>
+            <SwipeToSlide />
+          </div>
+        </Col>
+      </div>
+      <div className="wbg-wrapper">
+        <Col span={12} style={{ maxWidth: "100%" }}>
+          <div className="best-seller-pc" style={{ display: "flex" }}>
+            <span className="holder">
+              <span className="sep_line"></span>
+            </span>
+            <h4>PC GAMING BEST-SELLER</h4>
+            <span className="holder">
+              <span className="sep_line"></span>
+            </span>
+          </div>
+          <div>
+            <SwipeToSlide />
+          </div>
+        </Col>
+      </div>
+      <div className="wbg-wrapper">
+        <Col span={12} style={{ maxWidth: "100%" }}>
+          <div className="best-seller-gamingGear" style={{ display: "flex" }}>
+            <span className="holder">
+              <span className="sep_line"></span>
+            </span>
+            <h4>GAMING GEAR</h4>
+            <span className="holder">
+              <span className="sep_line"></span>
+            </span>
           </div>
           <div>
             <SwipeToSlide />
@@ -167,8 +204,7 @@ export default function HomeContent() {
         </Col>
       </div>
 
-      {/* 3 hình đầu  */}
-      <Row className="intro-product">
+      {/* <Row className="intro-product">
         <Col span={8}>
           <Card
             style={{ width: 400, cursor: "pointer" }}
@@ -213,7 +249,7 @@ export default function HomeContent() {
             <Meta title="Card title" description="This is the description" />
           </Card>
         </Col>
-        {/* From the BLog */}
+     
       </Row>
       <Row className="content">
         <Col span={8} className="blog">
@@ -272,7 +308,7 @@ export default function HomeContent() {
             })}
           </Row>
         </Col>
-      </Row>
+      </Row> */}
     </div>
   );
 }

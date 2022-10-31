@@ -17,24 +17,25 @@
 .btn-login:hover {
   background-color: red;
 }
-.forgot-password-login {
+.link-to-form-register {
   margin-left: 70px;
-  color: black;
+  color: #dad5d5;
   font-size: 15px;
   position: relative;
   font-weight: bold;
 }
-.forgot-password-login:before {
+.link-to-form-register:before {
   content: "";
   height: 2px;
-  width: 120px;
+  width: 70px;
   background: #dad5d5;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: -5px;
+  bottom: -5px;
 }
-.forgot-password-login:hover {
-  color: #dad5d5;
+
+.link-to-form-register:hover {
+  color: black;
 }
 
 .form-name {
