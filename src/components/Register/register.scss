@@ -1,0 +1,45 @@
+.ant-modal-body {
+  margin-left: -40px;
+  width: 500px;
+}
+.btn-login {
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+}
+.btn-login:focus {
+  background-color: red;
+}
+.btn-login:hover {
+  background-color: red;
+}
+.link-to-form-login {
+  margin-left: 70px;
+  color: #dad5d5;
+  font-size: 15px;
+  position: relative;
+  font-weight: bold;
+}
+.link-to-form-login:before {
+  content: "";
+  height: 2px;
+  width: 90px;
+  background: #dad5d5;
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+}
+
+.link-to-form-login:hover {
+  color: black;
+}
+
+.form-name {
+  margin-left: 200px;
+  font-size: 30px;
+  font-weight: bold;
+}

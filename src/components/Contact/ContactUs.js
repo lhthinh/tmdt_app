@@ -1,7 +1,7 @@
 import { Button, Card, Col, Form, Input, Radio, Row } from "antd";
 import SizeContext from "antd/lib/config-provider/SizeContext";
 import React from "react";
-import logo from "../../assets/image/logo.png";
+import logo from "../../assets/image/logo1.png";
 import { UilAirplay } from "@iconscout/react-unicons";
 import TextArea from "antd/lib/input/TextArea";
 import "./contact.scss";
@@ -17,7 +17,7 @@ export default function ContactUs() {
           <Card
             style={{
               width: 600,
-              height: 820,
+              height: 950,
               marginLeft: 150,
               borderRadius: 30,
             }}
@@ -34,9 +34,13 @@ export default function ContactUs() {
               <p>Phone: 090 968 6884</p>
               <p>Phone: 094 600 5077</p>
               <br />
-              Email bán hàng:sales@asics.com
+              <a className="contact_email" href="mailto:sales@asics.com">
+                Email bán hàng:sales@asics.com
+              </a>
               <br />
-              CSKH Asics:support@asics.com
+              <a className="contact_email" href="mailto:support@asics.com">
+                CSKH Asics:support@asics.com
+              </a>
             </div>
           </Card>
         </Col>

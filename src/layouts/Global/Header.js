@@ -6,24 +6,14 @@ import {
   UilAngleRightB,
   UilAngleUp,
 } from "@iconscout/react-unicons";
-import { Col, Input, Row, Badge } from "antd";
+import { Col, Row, Badge } from "antd";
 import { BackTop } from "antd";
-import { find } from "lodash";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { show } from "../../components/Login/LoginSlice";
 import "./header.scss";
-import { ClockCircleOutlined } from "@ant-design/icons";
 
-const { Search } = Input;
-const suffix = (
-  <UilSearch
-    style={{
-      fontSize: 100,
-    }}
-  />
-);
 const style = {
   height: 40,
   width: 40,
@@ -32,7 +22,6 @@ const style = {
   color: "#fff",
   textAlign: "center",
   fontSize: 14,
-  marginTop: 5,
 };
 export default function Header() {
   const dispatch = useDispatch();
@@ -124,7 +113,12 @@ export default function Header() {
           <nav className="container_nav-header">
             <ul id="main-menu">
               <li>
-                <a className="name-provider">
+                <a
+                  className="name-provider"
+                  onClick={() => {
+                    navigate("/get/product");
+                  }}
+                >
                   Laptop
                   <UilAngleDown style={{ width: 15, height: 15 }} />
                 </a>

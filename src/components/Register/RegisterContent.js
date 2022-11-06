@@ -1,28 +1,27 @@
 import { Modal } from "antd";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { unshow } from "./LoginSlice";
-
 import { Button, Checkbox, Form, Input } from "antd";
-import "./login.scss";
-import { showRegister } from "../Register/RegisterSlice";
-export default function LoginContent() {
-  const visible = useSelector((state) => state.login.visible);
+import "./register.scss";
+import { unshowRegister } from "./RegisterSlice";
+export default function RegisterContent() {
+  const visible = useSelector((state) => state.register.visible);
+  console.log(visible);
   const [form] = Form.useForm();
 
   const dispatch = useDispatch();
-
   const handleCancel = () => {
-    dispatch(unshow());
+    dispatch(unshowRegister());
   };
-
   const onFinish = (values) => {
     console.log("Success:", values);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-
+  //   const handleOpen = () => {
+  //     dispatch(show());
+  //   };
   return (
     <Modal
       style={{ paddingTop: 142 }}
@@ -48,7 +47,7 @@ export default function LoginContent() {
         onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
-        <Form.Item className="form-name">Đăng nhập</Form.Item>
+        <Form.Item className="form-name">Đăng ký</Form.Item>
         <Form.Item
           label="Username"
           name="username"
@@ -69,6 +68,20 @@ export default function LoginContent() {
             {
               required: true,
               message: "Please input your password!",
+            },
+            { max: 30, message: "Mật khẩu không được vượt quá 30 ký tự" },
+          ]}
+        >
+          <Input.Password />
+        </Form.Item>
+
+        <Form.Item
+          label="ConfirmPassword"
+          name="confirmpassword"
+          rules={[
+            {
+              required: true,
+              message: "Please input your confirm password!",
             },
             { max: 30, message: "Mật khẩu không được vượt quá 30 ký tự" },
           ]}
@@ -100,17 +113,9 @@ export default function LoginContent() {
               form.submit();
             }}
           >
-            LOGIN
+            Register
           </Button>
-          <a
-            className="link-to-form-register"
-            onClick={() => {
-              handleCancel();
-              dispatch(showRegister());
-            }}
-          >
-            Đăng ký
-          </a>
+          <a className="link-to-form-login">Đăng nhập</a>
         </Form.Item>
       </Form>
     </Modal>

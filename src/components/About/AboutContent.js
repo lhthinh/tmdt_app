@@ -31,7 +31,7 @@ export default function AboutContent() {
                 </h2>
               </div>
               <div className="des">
-                <p>
+                <p style={{ fontSize: "16px" }}>
                   Thương hiệu Asics bao gồm website <a>theasics.com</a> và
                   <a> Fanpage AsicsVietnam.</a> <br /> <br />
                   Thương hiệu Asics thuộc sở hữu của Công ty TNHH The Asics.
@@ -76,28 +76,29 @@ export default function AboutContent() {
           <Col span={12}>
             <div style={{ marginLeft: 60 }}>
               <h2 className="main-title">CHÍNH SÁCH KHÁCH HÀNG</h2>
-              <p>
+              <p style={{ fontSize: "16px" }}>
+                Với phương châm : <br /> <br />
                 <b>
-                  Với phương châm : <br /> <br /> “Chất lượng là sự bảo đảm tốt
-                  nhất lòng trung thành của khách hàng.” <br /> <br /> Eurotech
-                  đã luôn nỗ lực không ngừng để mang đến các sản phẩm, dịch vụ
-                  tốt nhất, giá cả hợp lý nhất phục vụ cho nhu cầu đa dạng của
-                  khách hàng. <br /> <br />
-                  1. Chính sách chất lượng: Chỉ cung cấp các sản phẩm và dịch vụ
-                  chất lượng cao từ các nhà sản xuất quốc tế uy tín hàng đầu.{" "}
-                  <br /> <br />
-                  2. Chính sách giá cả: Cung cấp sản phẩm trực tiếp từ nhà sản
-                  xuất, không thông qua bất kỳ kênh trung gian nào khác, Xgear
-                  luôn mang đến cho khách hàng mức giá tốt nhất khi mua hàng tại
-                  đây. Chúng tôi cam kết chia sẻ quyền lợi với khách hàng.{" "}
-                  <br /> <br />
-                  3. Chính sách chăm sóc: Chúng tôi luôn nỗ lực mang đến sự hài
-                  lòng cho mỗi khách hàng qua phong cách phục vụ tận tình, thấu
-                  hiểu và tinh tế. Với đội ngũ nhân viên tư vấn bán hàng chuyên
-                  nghiệp, các chuyên gia kĩ thuật trong ngành, Xgear đảm bảo
-                  cung cấp cho khách hàng những thông tin trung thực cùng những
-                  giải pháp tốt nhất, đạt hiệu quả kinh tế cao nhất.
+                  “Chất lượng là sự bảo đảm tốt nhất lòng trung thành của khách
+                  hàng.”
                 </b>
+                <br /> <br /> Eurotech đã luôn nỗ lực không ngừng để mang đến
+                các sản phẩm, dịch vụ tốt nhất, giá cả hợp lý nhất phục vụ cho
+                nhu cầu đa dạng của khách hàng. <br /> <br />
+                <b>1. Chính sách chất lượng:</b> Chỉ cung cấp các sản phẩm và
+                dịch vụ chất lượng cao từ các nhà sản xuất quốc tế uy tín hàng
+                đầu. <br /> <br />
+                <b>2. Chính sách giá cả:</b> Cung cấp sản phẩm trực tiếp từ nhà
+                sản xuất, không thông qua bất kỳ kênh trung gian nào khác, The
+                Asisc luôn mang đến cho khách hàng mức giá tốt nhất khi mua hàng
+                tại đây. Chúng tôi cam kết chia sẻ quyền lợi với khách hàng.
+                <br /> <br />
+                <b>3. Chính sách chăm sóc:</b> Chúng tôi luôn nỗ lực mang đến sự
+                hài lòng cho mỗi khách hàng qua phong cách phục vụ tận tình,
+                thấu hiểu và tinh tế. Với đội ngũ nhân viên tư vấn bán hàng
+                chuyên nghiệp, các chuyên gia kĩ thuật trong ngành, The Asics
+                đảm bảo cung cấp cho khách hàng những thông tin trung thực cùng
+                những giải pháp tốt nhất, đạt hiệu quả kinh tế cao nhất.
               </p>
             </div>
           </Col>

@@ -33,10 +33,7 @@ div {
   text-transform: initial;
   margin: 0 0 15px;
 }
-ul {
-  margin: 0;
-  padding: 0;
-}
+
 .footer-top .info-footer .title {
   font-style: normal;
   font-weight: 400;
@@ -59,6 +56,7 @@ ul {
 }
 .footer-top .phoneNumber li a {
   color: red;
+  text-decoration: none;
 }
 .phoneNumber li:not(:last-child):after {
   content: "";
@@ -78,6 +76,7 @@ ul {
   font-size: 14px;
   line-height: normal;
   color: #fff;
+  text-decoration: none;
 }
 .mailto:hover {
   color: red;
@@ -125,6 +124,7 @@ ul {
   font-size: 14px;
   line-height: normal;
   color: #fff;
+  text-decoration: none;
 }
 .qLink:hover {
   color: red;
@@ -133,6 +133,91 @@ ul {
   padding-top: 40px;
   font-size: 25px;
 }
+
+.footer-content {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  padding-left: 0;
+}
+.footer-bottom .content-footer-bottom {
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 20px 0;
+}
+.footer-bottom .copyright-footer {
+  width: 70%;
+  padding-right: 15px;
+}
+.footer-bottom .copyright-footer p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  color: rgb(247 247 247 / 50%);
+  margin: 0;
+}
+.footer-bottom .social-ic {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin: 0;
+  width: 30%;
+  padding-left: 15px;
+}
+.footer-bottom .social-ic ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: 0 -8px;
+  z-index: 2;
+  position: relative;
+}
+.footer-bottom .social-ic ul li {
+  padding: 0 8px;
+}
+.footer-bottom .social-ic ul li a {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #dadada;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.footer-bottom .social-ic ul li a:hover {
+  border-color: #e30000;
+  background: #e30000;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  color: #fff;
+}
+
 // .footer-title {
 //   background-color: #f8d849;
 //   text-align: center;

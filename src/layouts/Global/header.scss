@@ -80,7 +80,7 @@ ul {
   border: none;
   width: 100%;
   box-shadow: 0 0 20px transparent;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 .check_order-accountCus {
   margin-left: 0px;
@@ -88,7 +88,7 @@ ul {
 .btn-submit-search {
   background: silver;
   position: absolute;
-  top: 29px;
+  top: 26px;
   transform: translateY(-50%);
   right: 10px;
   width: 40px;
@@ -185,6 +185,7 @@ ul {
 #main-menu > li:hover > a::before {
   width: 100%;
 }
+
 #main-menu ul.sub-menu {
   position: absolute;
   background-color: #000;

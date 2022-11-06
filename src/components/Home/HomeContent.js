@@ -11,6 +11,7 @@ import acer from "../../assets/image/Acer-Store.jpg";
 import asus from "../../assets/image/Asus-Store.jpg";
 import lenovo from "../../assets/image/Lenovo-Store.jpg";
 import msi from "../../assets/image/MSI-Store.jpg";
+import hinhmau from "../../assets/image/aspire-2.jpg";
 
 import SwipeToSlide from "../Slider/slider.js";
 const { Meta } = Card;
@@ -18,12 +19,13 @@ const onChange = (currentSlide) => {
   console.log(currentSlide);
 };
 const contentStyle = {
-  width: "1040px",
-  height: "313px",
-  color: "#fff",
-  lineHeight: "313px",
-  textAlign: "center",
-  background: "#364d79",
+  width: "1320px",
+  height: "350px",
+  // color: "#fff",
+  lineHeight: "350px",
+  // textAlign: "center",
+  // background: "#364d79",
+  dot: false,
 };
 
 // const {};
@@ -78,130 +80,219 @@ export default function HomeContent() {
   //   },
   // ];
   //
+  const bestSellerArray = [
+    {
+      name: "Laptop Gaming Acer Aspire 7 A715-42G-R4XX GTX 1650 4GB Ryzen 5 5500U 8GB 256GB 15.6 FHD IPS Win 11",
+      price: "14.790.00đ",
+      img: hinhmau,
+    },
+    {
+      name: "ram",
+      price: 200,
+      img: hinhmau,
+    },
+    {
+      name: "ram",
+      price: 200,
+      img: hinhmau,
+    },
+    {
+      name: "ram",
+      price: 200,
+      img: hinhmau,
+    },
+    {
+      name: "ram",
+      price: 200,
+      img: hinhmau,
+    },
+    {
+      name: "ram",
+      price: 200,
+      img: hinhmau,
+    },
+  ];
+  const bestGamingSellerArray = [
+    {
+      name: "Laptop Gaming Acer Aspire 7 A715-42G-R4XX GTX 1650 4GB Ryzen 5 5500U 8GB 256GB 15.6 FHD IPS Win 11",
+      price: "14,790,00đ",
+      img: hinhmau,
+    },
+    {
+      name: "pc",
+      price: 200,
+      img: hinhmau,
+    },
+    {
+      name: "pc",
+      price: 200,
+      img: hinhmau,
+    },
+    {
+      name: "pc",
+      price: 200,
+      img: hinhmau,
+    },
+    {
+      name: "pc",
+      price: 200,
+      img: hinhmau,
+    },
+    {
+      name: "pc",
+      price: 200,
+      img: hinhmau,
+    },
+  ];
   return (
-    <div class="body">
-      <div className="wrapper">
-        <div className="intro-adv">
-          <Carousel afterChange={onChange} autoplay>
-            <div>
-              <h3 style={contentStyle}>
-                <img alt="advertisement" src={adv1} />
-              </h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>
-                <img alt="advertisement" src={adv2} />
-              </h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>
-                <img alt="advertisement" src={adv3} />
-              </h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>
-                <img alt="advertisement" src={adv4} />
-              </h3>
-            </div>
-          </Carousel>
+    <div className="body">
+      <div className="container">
+        <div className="wrapper">
+          <div className="intro-adv">
+            <Carousel afterChange={onChange} autoplay>
+              <div>
+                <h3 style={contentStyle}>
+                  <img alt="advertisement" src={adv1} />
+                </h3>
+              </div>
+              <div>
+                <h3 style={contentStyle}>
+                  <img alt="advertisement" src={adv2} />
+                </h3>
+              </div>
+              <div>
+                <h3 style={contentStyle}>
+                  <img alt="advertisement" src={adv3} />
+                </h3>
+              </div>
+              <div>
+                <h3 style={contentStyle}>
+                  <img alt="advertisement" src={adv4} />
+                </h3>
+              </div>
+            </Carousel>
+          </div>
         </div>
-      </div>
-      {/* Provider */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: 20,
-        }}
-      >
-        <Row className="provi-store">
-          <Col span={6}>
-            <a
-              onClick={() => {
-                navigate("/acer");
-              }}
-            >
-              <img src={acer} alt="" width="520" height="235" />
-            </a>
+        {/* Provider */}
+        <div
+          style={{
+            display: "flex",
+            marginTop: 20,
+          }}
+        >
+          <Row className="provi-store">
+            <Col span={6}>
+              <a
+                onClick={() => {
+                  navigate("/acer");
+                }}
+              >
+                <img
+                  src={acer}
+                  alt=""
+                  width="655"
+                  height="235"
+                  style={{ borderRadius: "30px" }}
+                />
+              </a>
+            </Col>
+            <Col span={6}>
+              <a
+                onClick={() => {
+                  navigate("/lenovo");
+                }}
+              >
+                <img
+                  src={lenovo}
+                  alt=""
+                  width="655"
+                  height="235"
+                  style={{ borderRadius: "30px" }}
+                />
+              </a>
+            </Col>
+          </Row>
+          <Row className="provi-store" style={{ marginLeft: "10px" }}>
+            <Col span={6}>
+              <a
+                onClick={() => {
+                  navigate("/asus");
+                }}
+              >
+                <img
+                  src={asus}
+                  alt=""
+                  width="655"
+                  height="235"
+                  style={{ borderRadius: "30px" }}
+                />
+              </a>
+            </Col>
+            <Col span={6}>
+              <a
+                onClick={() => {
+                  navigate("/msi");
+                }}
+              >
+                <img
+                  src={msi}
+                  alt=""
+                  width="655"
+                  height="235  "
+                  style={{ borderRadius: "30px" }}
+                />
+              </a>
+            </Col>
+          </Row>
+        </div>
+        <div className="wbg-wrapper">
+          <Col span={12} style={{ maxWidth: "100%" }}>
+            <div className="best-seller-laptop" style={{ display: "flex" }}>
+              <span className="holder">
+                <span className="sep_line"></span>
+              </span>
+              <h4>LAPTOP GAMING BEST-SELLER</h4>
+              <span className="holder">
+                <span className="sep_line"></span>
+              </span>
+            </div>
+            <div>
+              <SwipeToSlide data={bestSellerArray} />
+            </div>
           </Col>
-          <Col span={6}>
-            <a
-              onClick={() => {
-                navigate("/lenovo");
-              }}
-            >
-              <img src={lenovo} alt="" width="520" height="235  " />
-            </a>
+        </div>
+        <div className="wbg-wrapper">
+          <Col span={12} style={{ maxWidth: "100%" }}>
+            <div className="best-seller-pc" style={{ display: "flex" }}>
+              <span className="holder">
+                <span className="sep_line"></span>
+              </span>
+              <h4>PC GAMING BEST-SELLER</h4>
+              <span className="holder">
+                <span className="sep_line"></span>
+              </span>
+            </div>
+            <div>
+              <SwipeToSlide data={bestGamingSellerArray} />
+            </div>
           </Col>
-        </Row>
-        <Row className="provi-store">
-          <Col span={6}>
-            <a
-              onClick={() => {
-                navigate("/asus");
-              }}
-            >
-              <img src={asus} alt="" width="520" height="235" />
-            </a>
+        </div>
+        <div className="wbg-wrapper">
+          <Col span={12} style={{ maxWidth: "100%" }}>
+            <div className="best-seller-gamingGear" style={{ display: "flex" }}>
+              <span className="holder">
+                <span className="sep_line"></span>
+              </span>
+              <h4>GAMING GEAR</h4>
+              <span className="holder">
+                <span className="sep_line"></span>
+              </span>
+            </div>
+            <div>
+              <SwipeToSlide data={bestGamingSellerArray} />
+            </div>
           </Col>
-          <Col span={6}>
-            <a
-              onClick={() => {
-                navigate("/msi");
-              }}
-            >
-              <img src={msi} alt="" width="520" height="235  " />
-            </a>
-          </Col>
-        </Row>
-      </div>
-      <div className="wbg-wrapper">
-        <Col span={12} style={{ maxWidth: "100%" }}>
-          <div className="best-seller-laptop" style={{ display: "flex" }}>
-            <span className="holder">
-              <span className="sep_line"></span>
-            </span>
-            <h4>LAPTOP GAMING BEST-SELLER</h4>
-            <span className="holder">
-              <span className="sep_line"></span>
-            </span>
-          </div>
-          <div>
-            <SwipeToSlide />
-          </div>
-        </Col>
-      </div>
-      <div className="wbg-wrapper">
-        <Col span={12} style={{ maxWidth: "100%" }}>
-          <div className="best-seller-pc" style={{ display: "flex" }}>
-            <span className="holder">
-              <span className="sep_line"></span>
-            </span>
-            <h4>PC GAMING BEST-SELLER</h4>
-            <span className="holder">
-              <span className="sep_line"></span>
-            </span>
-          </div>
-          <div>
-            <SwipeToSlide />
-          </div>
-        </Col>
-      </div>
-      <div className="wbg-wrapper">
-        <Col span={12} style={{ maxWidth: "100%" }}>
-          <div className="best-seller-gamingGear" style={{ display: "flex" }}>
-            <span className="holder">
-              <span className="sep_line"></span>
-            </span>
-            <h4>GAMING GEAR</h4>
-            <span className="holder">
-              <span className="sep_line"></span>
-            </span>
-          </div>
-          <div>
-            <SwipeToSlide />
-          </div>
-        </Col>
+        </div>
       </div>
 
       {/* <Row className="intro-product">

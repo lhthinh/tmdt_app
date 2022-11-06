@@ -3,9 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Global from "../src/layouts/Global";
 import { globalRoutes } from "./Routes";
 import _ from "lodash";
+import HomeContent from "./components/Home/HomeContent";
 export default function AppRoutes() {
-  const Home = lazy(() => import("./components/Home/HomeContent"));
-
   return (
     <Suspense>
       <Routes>

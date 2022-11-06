@@ -1,10 +1,16 @@
 import { Col, Row } from "antd";
 import React from "react";
 import "./footer.scss";
-import { useNavigate } from "react-router-dom";
-import { UilLocationPinAlt } from "@iconscout/react-unicons";
+import { useLocation, useNavigate } from "react-router-dom";
+import {
+  UilLocationPinAlt,
+  UilFacebookF,
+  UilInstagram,
+  UilYoutube,
+} from "@iconscout/react-unicons";
 
 export default function Footer() {
+  const location = useLocation();
   const navigate = useNavigate();
   return (
     <div className="footer">
@@ -12,7 +18,7 @@ export default function Footer() {
         <div className="footer-top">
           <div class="container-footer">
             <Row className="row-footer">
-              <Col span={4} className="info-footer">
+              <Col span={6} className="info-footer">
                 <div className="item">
                   <h3 className="footer-title">Thông tin liên hệ</h3>
                   <div className="footer-content">
@@ -72,7 +78,7 @@ export default function Footer() {
                   </div>
                 </div>
               </Col>
-              <Col span={4} className="store-footer">
+              <Col span={6} className="store-footer">
                 <div className="item">
                   <h3 className="footer-title">Hệ thống cửa hàng</h3>
                   <div className="footer-content">
@@ -98,7 +104,7 @@ export default function Footer() {
                               color: "red",
                               width: 40,
                               height: 40,
-                              paddingTop: 17,
+                              paddingTop: 10,
                               margin: -2,
                             }}
                           />
@@ -134,6 +140,14 @@ export default function Footer() {
                           onClick={() => {
                             navigate("/about");
                           }}
+                          // chọn trang thì title trang đó đổi màu
+                          style={
+                            location.pathname.includes("about")
+                              ? {
+                                  color: "red",
+                                }
+                              : {}
+                          }
                         >
                           Về Asics
                         </a>
@@ -143,8 +157,16 @@ export default function Footer() {
                           className="qLink"
                           title="Sản phẩm"
                           onClick={() => {
-                            navigate("/listproduct");
+                            navigate("/all/product");
                           }}
+                          // chọn trang thì title trang đó đổi màu
+                          style={
+                            location.pathname.includes("all/product")
+                              ? {
+                                  color: "red",
+                                }
+                              : {}
+                          }
                         >
                           Sản phẩm
                         </a>
@@ -156,6 +178,14 @@ export default function Footer() {
                           onClick={() => {
                             navigate("/contact");
                           }}
+                          // chọn trang thì title trang đó đổi màu
+                          style={
+                            location.pathname.includes("contact")
+                              ? {
+                                  color: "red",
+                                }
+                              : {}
+                          }
                         >
                           Liên hệ
                         </a>
@@ -167,6 +197,14 @@ export default function Footer() {
                           onClick={() => {
                             navigate("/blog");
                           }}
+                          // chọn trang thì title trang đó đổi màu
+                          style={
+                            location.pathname.includes("blog")
+                              ? {
+                                  color: "red",
+                                }
+                              : {}
+                          }
                         >
                           Tin Tức
                         </a>
@@ -189,7 +227,41 @@ export default function Footer() {
             </Row>
           </div>
         </div>
-        <div clasName="footer-bottom"></div>
+        <div className="footer-bottom">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="content-footer-bottom">
+                  <div className="copyright-footer">
+                    <p>
+                      Copyright © 2022 Asics | Nguyễn Gia Hào | Hà Quốc Thanh
+                      Nguyên | Tăng Kim Phi Long
+                    </p>
+                  </div>
+                  <div className="social-ic">
+                    <ul>
+                      <li>
+                        <a target="_blank" href="#">
+                          <UilFacebookF />
+                        </a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="#">
+                          <UilInstagram />
+                        </a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="#">
+                          <UilYoutube />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       {/* <div className="footer-title">
         <Row>

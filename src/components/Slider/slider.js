@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Card, Col, Row } from "antd";
 import "./slider.scss";
 import Slider from "react-slick";
@@ -8,90 +8,49 @@ import "slick-carousel/slick/slick-theme.css";
 import hinhmau from "../../assets/image/aspire-2.jpg";
 const { Meta } = Card;
 
-export default function MultipleItems() {
+export default function MultipleItems(props) {
+  const { data: dataTest } = props;
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
   };
   const navigate = useNavigate();
-  const tempArr = [
-    {
-      name: "ram",
-      price: "10.900.000",
-      img: hinhmau,
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: hinhmau,
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: hinhmau,
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: hinhmau,
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: hinhmau,
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: hinhmau,
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: hinhmau,
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: hinhmau,
-    },
-    {
-      name: "ram",
-      price: 200,
-      img: hinhmau,
-    },
-  ];
 
   return (
     <div>
       <Slider {...settings}>
-        {tempArr.map((item, index) => {
+        {dataTest?.map((item, index) => {
           return (
-            <Col span={4}>
+            <Col span={24}>
               <Card
                 style={{
-                  width: 240,
-                  height: 300,
+                  width: 300,
+                  height: 350,
                   cursor: "pointer",
-                  fontSize: 15,
                 }}
                 className="main-menu"
                 cover={<img alt="product" src={item.img} />}
-                onClick={() => {
-                  navigate("/product");
-                }}
               >
                 <ul>
-                  <li>
-                    <a>
-                      <Meta title={item.name} description={item.price} />
+                  <li className="title_price-product">
+                    <a className="title-product">
+                      <Meta title={item.name} />
+                    </a>
+                    <a className="price-product">
+                      <Meta description={item.price} />
                     </a>
                     <ul className="sub-menu">
                       <li>
-                        <a>Mua Ngay</a>
+                        <a
+                          onClick={() => {
+                            navigate("/product");
+                          }}
+                        >
+                          Mua Ngay
+                        </a>
                       </li>
                     </ul>
                   </li>
