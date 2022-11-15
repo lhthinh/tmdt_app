@@ -1,23 +1,33 @@
 import { Modal } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { unshow } from "./LoginSlice";
-
 import { Button, Checkbox, Form, Input } from "antd";
 import "./login.scss";
 import { showRegister } from "../Register/RegisterSlice";
+import { loginUser } from "../../app/apiRequest";
+import { toastSuccess, toastError } from "../../app/toastSlice";
+import { useNavigate } from "react-router-dom";
+
 export default function LoginContent() {
   const visible = useSelector((state) => state.login.visible);
   const [form] = Form.useForm();
-
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleCancel = () => {
     dispatch(unshow());
   };
 
   const onFinish = (values) => {
-    console.log("Success:", values);
+    try {
+      const user = { email: values.email, password: values.password };
+      loginUser(user, dispatch, navigate);
+      dispatch(toastSuccess("Đăng nhập thành công"));
+    } catch (err) {
+      console.log(err);
+      dispatch(toastError("Đăng nhập thất bại"));
+    }
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -50,12 +60,12 @@ export default function LoginContent() {
       >
         <Form.Item className="form-name">Đăng nhập</Form.Item>
         <Form.Item
-          label="Username"
-          name="username"
+          label="Mail"
+          name="email"
           rules={[
             {
               required: true,
-              message: "Please input your username!",
+              message: "Please input your mail!",
             },
           ]}
         >

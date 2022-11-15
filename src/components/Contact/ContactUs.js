@@ -34,11 +34,19 @@ export default function ContactUs() {
               <p>Phone: 090 968 6884</p>
               <p>Phone: 094 600 5077</p>
               <br />
-              <a className="contact_email" href="mailto:sales@asics.com">
+              <a
+                className="contact_email"
+                href="mailto:sales@asics.com"
+                style={{ textDecoration: "none" }}
+              >
                 Email bán hàng:sales@asics.com
               </a>
               <br />
-              <a className="contact_email" href="mailto:support@asics.com">
+              <a
+                className="contact_email"
+                href="mailto:support@asics.com"
+                style={{ textDecoration: "none" }}
+              >
                 CSKH Asics:support@asics.com
               </a>
             </div>

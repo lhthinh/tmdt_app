@@ -12,7 +12,7 @@ export default function ProductContent() {
     price: 200,
     description: "Ram 8gb",
     img: hinhmau,
-    qualify: 1,
+    qualify: 0,
   };
   const [qualify, setQualify] = useState(1);
   // const increment = () => {
@@ -223,7 +223,7 @@ export default function ProductContent() {
                   <div className="cont">
                     <p style={{ fontSize: "14px" }}>
                       <br />» Miễn phí giao hàng toàn quốc
-                      <br />» Giao nhanh 2h chỉ 20k( nội thành HCM - HN)
+                      <br />» Giao nhanh 2h chỉ 20k( nội thành HCM )
                     </p>
                   </div>
                 </div>

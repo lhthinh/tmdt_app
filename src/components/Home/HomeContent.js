@@ -180,7 +180,7 @@ export default function HomeContent() {
             marginTop: 20,
           }}
         >
-          <Row className="provi-store">
+          <Row className="provi-store" style={{ display: "flex" }}>
             <Col span={6}>
               <a
                 onClick={() => {
@@ -212,7 +212,10 @@ export default function HomeContent() {
               </a>
             </Col>
           </Row>
-          <Row className="provi-store" style={{ marginLeft: "10px" }}>
+          <Row
+            className="provi-store"
+            style={{ marginLeft: "10px", display: "flex" }}
+          >
             <Col span={6}>
               <a
                 onClick={() => {

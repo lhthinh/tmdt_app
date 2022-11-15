@@ -22,10 +22,10 @@ export default function Footer() {
                 <div className="item">
                   <h3 className="footer-title">Thông tin liên hệ</h3>
                   <div className="footer-content">
-                    <ul clasName="ft-ct">
+                    <ul clasName="ft-ct" style={{ paddingLeft: 0 }}>
                       <li className="phoneNumber">
                         <h3 className="title">Hotline:</h3>
-                        <ul>
+                        <ul style={{ paddingLeft: 0 }}>
                           <li>
                             <a href="sđt:0909686884">
                               <b>090 968 6884</b>
@@ -43,7 +43,7 @@ export default function Footer() {
                         style={{ marginTop: 10, marginBottom: 20 }}
                       >
                         <h3 className="title">Email:</h3>
-                        <ul>
+                        <ul style={{ paddingLeft: 0 }}>
                           <li>
                             <a href="mailto:sales@asics.com" className="mailto">
                               <b>sales@asics.com</b>
@@ -61,7 +61,7 @@ export default function Footer() {
                       </li>
                       <li className="timeWork_gr">
                         <h3 className="title">Giờ làm việc:</h3>
-                        <ul>
+                        <ul style={{ paddingLeft: 0 }}>
                           <li>
                             <p>
                               <b>Thứ 2 - Thứ 7 09h:00 - 19h:00</b>
@@ -82,9 +82,9 @@ export default function Footer() {
                 <div className="item">
                   <h3 className="footer-title">Hệ thống cửa hàng</h3>
                   <div className="footer-content">
-                    <ul clasName="ft-ct">
+                    <ul clasName="ft-ct" style={{ paddingLeft: 0 }}>
                       <h3 className="title">TPHCM:</h3>
-                      <ul>
+                      <ul style={{ paddingLeft: 0 }}>
                         <li>
                           <UilLocationPinAlt
                             style={{
@@ -105,7 +105,7 @@ export default function Footer() {
                               width: 40,
                               height: 40,
                               paddingTop: 10,
-                              margin: -2,
+                              margin: -5,
                             }}
                           />
                           <p>828, Sư Vạn Hạnh, quận 10, Hồ Chí Minh</p>
@@ -117,6 +117,7 @@ export default function Footer() {
                               width: 40,
                               height: 40,
                               paddingTop: 10,
+                              margin: -2,
                             }}
                           />
                           <p>
@@ -132,7 +133,7 @@ export default function Footer() {
                 <div className="item">
                   <h3 className="footer-title">Liên kết nhanh</h3>
                   <div className="footer-content">
-                    <ul clasName="ft-ct">
+                    <ul clasName="ft-ct" style={{ paddingLeft: 0 }}>
                       <li>
                         <a
                           className="qLink"
@@ -214,7 +215,7 @@ export default function Footer() {
                   <div className="My_website">
                     <a
                       onClick={() => {
-                        navigate("/#");
+                        navigate("/");
                       }}
                       style={{ display: "flex" }}
                     >

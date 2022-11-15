@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  allProduct: false,
+  allProductGet: false,
 };
 
 const productGetSlice = createSlice({
   name: "ProductGetContent",
   initialState,
   reducers: {
-    getAllProduct: (state, action) => {
-      state.allProduct = action.payload;
+    getAllProductGet: (state, action) => {
+      state.allProductGet = action.payload;
     },
   },
 });
-export const { getAllProduct } = productGetSlice.actions;
+export const { getAllProductGet } = productGetSlice.actions;
 export default productGetSlice.reducer;

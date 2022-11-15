@@ -12,6 +12,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { show } from "../../components/Login/LoginSlice";
+import { useState } from "react";
 import "./header.scss";
 
 const style = {
@@ -35,11 +36,11 @@ export default function Header() {
       <div className="header">
         <div className="container">
           <Row style={{ display: "flex" }}>
-            <Col span={3}></Col>
-            <Col span={3}>
+            {/* <Col span={3}></Col> */}
+            <Col span={4}>
               <a
                 onClick={() => {
-                  navigate("/#");
+                  navigate("/");
                 }}
                 style={{ display: "flex" }}
               >
@@ -47,7 +48,8 @@ export default function Header() {
                 <h1 style={{ color: "white" }}>sics</h1>
               </a>
             </Col>
-            <Col span={8}>
+            <Col span={1}></Col>
+            <Col span={12}>
               <div className="As-searchbox">
                 {/* <div className="title-warp">
                   <h3 className="title">Tìm kiếm</h3>
@@ -74,7 +76,8 @@ export default function Header() {
                 </div>
               </div>
             </Col>
-            <Col span={6} className="check_order-accountCus">
+
+            <Col span={7} className="check_order-accountCus">
               <div className="Asico-head-warp">
                 <div className="Ascheck-order-warp">
                   <button
@@ -86,7 +89,11 @@ export default function Header() {
                     Kiểm tra đơn hàng
                   </button>
                   <ul className="ico-header">
-                    <li onClick={handleOpen} className="ic-user">
+                    <li
+                      onClick={handleOpen}
+                      className="ic-user"
+                      style={{ cursor: "pointer" }}
+                    >
                       <UilUser style={{ width: 30, height: 30 }} />
                     </li>
 
@@ -94,6 +101,7 @@ export default function Header() {
                       onClick={() => {
                         navigate("/cart");
                       }}
+                      style={{ cursor: "pointer" }}
                     >
                       <Badge count={0} showZero>
                         <UilShoppingCartAlt

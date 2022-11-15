@@ -3,12 +3,15 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Button, Checkbox, Form, Input } from "antd";
 import "./register.scss";
+import { show } from "../../components/Login/LoginSlice";
 import { unshowRegister } from "./RegisterSlice";
 export default function RegisterContent() {
   const visible = useSelector((state) => state.register.visible);
   console.log(visible);
   const [form] = Form.useForm();
-
+  const handleOpen = () => {
+    dispatch(show());
+  };
   const dispatch = useDispatch();
   const handleCancel = () => {
     dispatch(unshowRegister());
@@ -115,7 +118,15 @@ export default function RegisterContent() {
           >
             Register
           </Button>
-          <a className="link-to-form-login">Đăng nhập</a>
+          <a
+            className="link-to-form-login"
+            onClick={() => {
+              handleCancel();
+              dispatch(show());
+            }}
+          >
+            Đăng nhập
+          </a>
         </Form.Item>
       </Form>
     </Modal>

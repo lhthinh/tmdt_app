@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { UilAngleDown, UilShoppingCartAlt } from "@iconscout/react-unicons";
-
+import _ from "lodash";
 import hinhmau from "../../assets/image/aspire-2.jpg";
 import "./ProductGetContent.scss";
 
@@ -72,7 +72,7 @@ export default function ProductGetContent() {
       img: hinhmau,
     },
   ];
-  console.log(product_card);
+  // const listItems = product_card.map((item) => (
   const listItems = product_card.map((item) => (
     <div className="card-productGet" key={item.id}>
       <div className="card_img">
@@ -229,7 +229,7 @@ export default function ProductGetContent() {
               </select>
               <div className="select-styled" onClick={handleOpenProduct}>
                 {visibleProduct.content}
-                {/* <UilAngleDown style={{ width: 15, height: 15 }} /> */}
+                <UilAngleDown style={{ width: 15, height: 15 }} />
               </div>
               <ul className="select-options" hidden={visibleProduct.visible}>
                 <li
@@ -266,7 +266,7 @@ export default function ProductGetContent() {
               </select>
               <div className="select-styled" onClick={handleOpenSort}>
                 {visibleSort.content}
-                {/* <UilAngleDown style={{ width: 15, height: 15 }} /> */}
+                <UilAngleDown style={{ width: 15, height: 15 }} />
               </div>
               <ul className="select-options" hidden={visibleSort.visible}>
                 <li
@@ -292,6 +292,7 @@ export default function ProductGetContent() {
                   className=""
                   onClick={() => {
                     handleChangeSort("Sắp xếp: Giá cao đến thấp");
+                    // sortData();
                   }}
                 >
                   Sắp xếp: Giá cao đến thấp

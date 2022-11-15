@@ -32,8 +32,10 @@ export default function AboutContent() {
               </div>
               <div className="des">
                 <p style={{ fontSize: "16px" }}>
-                  Thương hiệu Asics bao gồm website <a>theasics.com</a> và
-                  <a> Fanpage AsicsVietnam.</a> <br /> <br />
+                  Thương hiệu Asics bao gồm website{" "}
+                  <a style={{ color: "blue;" }}>theasics.com</a> và
+                  <a style={{ color: "blue;" }}> Fanpage AsicsVietnam.</a>{" "}
+                  <br /> <br />
                   Thương hiệu Asics thuộc sở hữu của Công ty TNHH The Asics.
                   Được biết đến là đơn vị ủy quyền bán lẻ chính thức tại Việt
                   Nam, chuyên kinh doanh các sản phẩm Laptop Gaming cao cấp, PC

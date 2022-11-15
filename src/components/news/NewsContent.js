@@ -40,8 +40,8 @@ export default function NewsContent() {
         </div>
       </div>
       <div className="gr-news-bottom">
-        <div className="container" style={{ marginLeft: "478px" }}>
-          <div style={{ display: "flex" }}>
+        <div className="container">
+          <div className="list-news">
             <div className="items-news">
               <div className="wrap-new-bottom">
                 <a className="news-1" style={{ textDecoration: "none" }}>
@@ -92,8 +92,6 @@ export default function NewsContent() {
                 </div>
               </div>
             </div>
-          </div>
-          <div style={{ display: "flex" }}>
             <div className="items-news">
               <div className="wrap-new-bottom">
                 <div className="img-news">
@@ -118,7 +116,6 @@ export default function NewsContent() {
                 </div>
               </div>
             </div>
-
             <div className="items-news">
               <div className="wrap-new-bottom">
                 <div className="img-news">
